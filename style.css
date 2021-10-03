@@ -1,0 +1,13 @@
+.jumbotron {
+  padding-top: 6rem;
+  background-color: rgb(255, 217, 0);
+}
+#projects {
+  background-color: rgb(255, 217, 0);
+}
+.card {
+  width: fit-content;
+}
+section {
+  padding-top: 5rem;
+}
