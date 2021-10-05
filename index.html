@@ -3,9 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--CSS Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+    <!--CSS AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
     <!--My CSS-->
     <link href="style.css" rel="stylesheet" />
+
 
     <title>Portofolio | Naufal Arif Kurniawan</title>
   </head>
@@ -35,9 +40,9 @@
     <!-- navbar akhir -->
     <!-- jumbotron -->
     <section class="jumbotron text-center">
-      <img src="img/test.jpg" alt="Naufal Arif Kurniawan" width="200" class="rounded-circle img-thumbnail" />
+      <img src="img/test.jpg" alt="Naufal Arif Kurniawan" width="200" class="rounded-circle img-thumbnail"  />
       <h1 class="display-4">Naufal Arif Kurniawan</h1>
-      <p class="lead">Fresh Graduate | Web Developer</p>
+      <p class="lead" data-aos="fade-up" data-aos-duration="2500">Fresh Graduate | Web Developer</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -50,16 +55,16 @@
     <!--About-->
     <section id="about">
       <div class="container">
-        <div class="row text-center mb-3">
+        <div class="row text-center mb-3"  data-aos="fade-down" data-aos-duration="1000">
           <div class="col">
             <h2>About Me</h2>
           </div>
         </div>
-        <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+        <div class="row justify-content-center fs-5 text-center" >
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="2000">
             <p>Being highly interested in technologies, Naufal finds himself attracted to programming. Despite being a non-linear graduate/unrelated to Computer Science he puts passion into programming.</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="2000">
             <p>Naufal always looks forward to opportunity to grow and progress along. Very eager to learn in order to hone his skills in web programming.</p>
           </div>
         </div>
@@ -77,13 +82,13 @@
     <section id="projects">
       <div class="container">
         <div class="row text-center mb-3">
-          <div class="col">
+          <div class="col" data-aos="fade-down" data-aos-duration="3000">
             <h2>My Projects</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="200" data-aos-duration="500">
               <img src="img/projects/2.jpg" class="card-img-top" alt="Project1" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -91,7 +96,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="400" data-aos-duration="500">
               <img src="img/projects/2.jpg" class="card-img-top" alt="Project1" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -99,7 +104,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="700" data-aos-duration="500">
               <img src="img/projects/2.jpg" class="card-img-top" alt="Project1" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -169,7 +174,25 @@
       </a></p>
     </footer>
     <!--Akhir Footer-->
+    
+    <!--script boostrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+    
+  <!--script aos-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          once: true,
+        });
+      </script>
+   <!--Script GSAP-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+   <script>
+     gsap.from('.jumbotron img', {duration: 1, y:-100, opacity: 0, ease: 'bounce'})
+     gsap.from('.navbar', {duration: 1.5, y:-100, opacity: 0})
+   gsap.from('.display-4', {duration: 2, x:-50, opacity: 0, delay: 0.5})
+   </script>
     <!--script google sheets-->
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbxWa2a6HGr7KmT6VSq0kjO5BMSe_Xyt96bKQVSQNC0EZlBD1Qps2Y4Lecgq87TRUzWl/exec'
@@ -197,5 +220,7 @@
           .catch(error => console.error('Error!', error.message))
       })
     </script>
+     
+    
   </body>
 </html>
