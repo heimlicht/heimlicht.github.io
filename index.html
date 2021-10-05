@@ -11,7 +11,7 @@
   </head>
   <body>
     <!-- navbar awal -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-warning shadow-sm">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm">
       <div class="container">
         <a class="navbar-brand" href="#">Naufal Arif</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,16 +57,16 @@
         </div>
         <div class="row justify-content-center fs-5 text-center">
           <div class="col-md-4">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis dicta facilis enim, cum animi quibusdam magnam quasi eius quam pariatur quisquam a mollitia nulla velit harum. Nisi eius fuga sint?</p>
+            <p>Being highly interested in technologies, Naufal finds himself attracted to programming. Despite being a non-linear graduate/unrelated to Computer Science he puts passion into programming.</p>
           </div>
           <div class="col-md-4">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo hic dicta facilis nemo ducimus debitis fuga sit ipsa, quos ex quasi delectus, quae ab inventore corporis voluptas error minus quia!</p>
+            <p>Naufal always looks forward to opportunity to grow and progress along. Very eager to learn in order to hone his skills in web programming.</p>
           </div>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#ffd900"
+          fill="#56565a"
           fill-opacity="1"
           d="M0,0L48,5.3C96,11,192,21,288,32C384,43,480,53,576,85.3C672,117,768,171,864,176C960,181,1056,139,1152,101.3C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
@@ -128,22 +128,30 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <form>
+            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+              <strong>Thank you!</strong> Your message has been recorded.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form name="email-subscribers">
               <div class="mb-3">
                 <label for="name" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <input type="text" class="form-control" id="name" aria-describedby="name" name="name"/>
               
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" />
+                <input type="email" class="form-control" id="email" aria-describedby="email" name="email"/>
                 
               </div>
 
-              <div class="mb-3">
+              <div id="message">
                 <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
-                <button type="submit" class="btn btn-primary mt-3">Send</button>  
+                <textarea class="form-control" id="message" rows="3" name="message"></textarea>
+                <button type="submit" class="btn btn-outline-dark btn-send">Send</button> 
+                <button class="btn btn-dark btn-loading d-none" type="button" disabled>
+                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  Loading...
+                </button>
               </div>
               </div>
               </div>
@@ -152,15 +160,42 @@
           </div>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffc107" fill-opacity="1" d="M0,288L48,261.3C96,235,192,181,288,186.7C384,192,480,256,576,250.7C672,245,768,171,864,149.3C960,128,1056,160,1152,176C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#56565a" fill-opacity="1" d="M0,288L48,261.3C96,235,192,181,288,186.7C384,192,480,256,576,250.7C672,245,768,171,864,149.3C960,128,1056,160,1152,176C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
     </section>
     <!--Akhir Contacts-->
     <!--Footer-->
-    <footer class="bg-warning text-white text-center pb-5">
+    <footer class="text-white text-center pb-5" id="footer">
       <p>Created By <a href="https://www.instagram.com/naufalarifk/" class="text-white fw-bold">Naufal Arif
       </a></p>
     </footer>
     <!--Akhir Footer-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <!--script google sheets-->
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxWa2a6HGr7KmT6VSq0kjO5BMSe_Xyt96bKQVSQNC0EZlBD1Qps2Y4Lecgq87TRUzWl/exec'
+      const form = document.forms['email-subscribers']
+      const btnSend = document.querySelector('.btn-send');
+      const btnLoading = document.querySelector('.btn-loading');
+      const myAlert = document.querySelector('.my-alert');
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        //when submitted
+        //show loading, remove send
+        btnLoading.classList.toggle('d-none');
+        btnSend.classList.toggle('d-none');
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            btnLoading.classList.toggle('d-none');
+            btnSend.classList.toggle('d-none');
+            myAlert.classList.toggle('d-none')
+            form.reset();
+            console.log('Success!', response)
+        
+        })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
   </body>
 </html>

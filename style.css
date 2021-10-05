@@ -1,13 +1,23 @@
 .jumbotron {
   padding-top: 6rem;
-  background-color: rgb(255, 217, 0);
+  background-color: #56565a;
+}
+.navbar {
+  background-color: #2e2e30;
 }
 #projects {
-  background-color: rgb(255, 217, 0);
+  background-color: #56565a;
 }
 .card {
   width: fit-content;
 }
 section {
   padding-top: 5rem;
+}
+#message {
+  padding-bottom: 5rem;
+  margin-bottom: 0.5rem;
+}
+#footer {
+  background-color: #56565a;
 }
